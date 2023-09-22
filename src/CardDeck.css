@@ -1,0 +1,56 @@
+.Deck-btn {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  margin: 25px 10px;
+  opacity: 80%;
+}
+
+.Deck-btn:hover {
+  opacity: 100%;
+  cursor: pointer;
+}
+
+.draw {
+  background-color: black;
+  color: white;
+  border: 8px solid;
+  border-image: repeating-linear-gradient(135deg,white 0 10px,red 0 20px,black 0 30px) 8;
+  -webkit-mask: 
+    conic-gradient(from 180deg at top 8px right 8px, #0000 90deg,#000 0)
+     var(--_i,200%) 0  /200% var(--_i,8px) border-box no-repeat,
+    conic-gradient(at bottom 8px left  8px,  #0000 90deg,#000 0)
+     0   var(--_i,200%)/var(--_i,8px) 200% border-box no-repeat,
+    linear-gradient(#000 0 0) padding-box no-repeat;
+  transition: .2s, -webkit-mask-position .2s .2s;
+}
+
+.draw:hover {
+  --_i: 100%;
+  color: red;
+  transition: .2s, -webkit-mask-size .2s .2s;
+}
+
+.shuffle {
+  background-color: red;
+  color: white;
+  border: 8px solid;
+  border-image: repeating-linear-gradient(135deg,white 0 10px,black 0 20px,red 0 30px) 8;
+  -webkit-mask: 
+    conic-gradient(from 180deg at top 8px right 8px, #0000 90deg,#000 0)
+     var(--_i,200%) 0  /200% var(--_i,8px) border-box no-repeat,
+    conic-gradient(at bottom 8px left  8px,  #0000 90deg,#000 0)
+     0   var(--_i,200%)/var(--_i,8px) 200% border-box no-repeat,
+    linear-gradient(#000 0 0) padding-box no-repeat;
+  transition: .2s, -webkit-mask-position .2s .2s;
+}
+
+.shuffle:hover {
+  --_i: 100%;
+  color: black;
+  transition: .2s, -webkit-mask-size .2s .2s;
+}
+
+.Deck-cards {
+  margin-top: 100px;
+}
